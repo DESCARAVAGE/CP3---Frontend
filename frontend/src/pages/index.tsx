@@ -31,15 +31,17 @@ const Home = () => {
   if (error) return <p>Error!</p>;
 
   return (
-    <Box className={styles.display} margin={1}>
-      <Box>
+    <Box>
+      <Box className={styles.display} padding={4}>
         <CountryForm />
       </Box>
-      {countries.map((country: Country, i) => (
-        <Box padding={1} key={i}>
-          <CountryCard country={country} />
-        </Box>
-      ))}
+      <Box className={styles.display} margin={1}>
+        {countries.map((country: Country, i) => (
+          <Box padding={1} key={i}>
+            <CountryCard country={country} />
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

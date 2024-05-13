@@ -1,5 +1,7 @@
 import { gql, useMutation } from "@apollo/client";
+import { Box } from "@mui/material";
 import { useRouter } from "next/router";
+import styles from "../styles/index.module.css";
 import { FormEvent, useState } from "react";
 
 const CREATE_COUNTRY = gql`
@@ -74,38 +76,44 @@ export default function CountryForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={submit}>
-        <label htmlFor="name">Name</label>
-        <input
-          required
-          type="text"
-          id="name"
-          name="name"
-          value={dataForm.name}
-          onChange={handleFormChange}
-        />
-        <label htmlFor="emoji">Emoji</label>
-        <input
-          required
-          type="text"
-          id="emoji"
-          name="emoji"
-          value={dataForm.emoji}
-          onChange={handleFormChange}
-        />
-        <label htmlFor="code">Code</label>
-        <input
-          required
-          type="text"
-          id="code"
-          name="code"
-          value={dataForm.code}
-          onChange={handleFormChange}
-        />
-        {isActivate ? (
-            <button type="submit">Soumettre</button>
-        ): null}
+    <div >
+      <form className={styles.form} onSubmit={submit}>
+        <Box padding={2}>
+          <label htmlFor="name">Name</label>
+          <input
+            required
+            type="text"
+            id="name"
+            name="name"
+            value={dataForm.name}
+            onChange={handleFormChange}
+          />
+        </Box>
+        <Box padding={2}>
+          <label htmlFor="emoji">Emoji</label>
+          <input
+            required
+            type="text"
+            id="emoji"
+            name="emoji"
+            value={dataForm.emoji}
+            onChange={handleFormChange}
+          />
+        </Box>
+        <Box padding={2}>
+          <label htmlFor="code">Code</label>
+          <input
+            required
+            type="text"
+            id="code"
+            name="code"
+            value={dataForm.code}
+            onChange={handleFormChange}
+          />
+        </Box>
+        <Box padding={2}>
+          {isActivate ? <button type="submit">Soumettre</button> : null}
+        </Box>
       </form>
     </div>
   );

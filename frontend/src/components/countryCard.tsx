@@ -11,7 +11,7 @@ export default function CountryCard({ country }: CountryProps) {
     <>
       <Box width={"fit-content"} margin={1}>
         <Link
-          href={`http://localhost:3000/countries/${country.id}`}
+          href={`http://localhost:3000/countries/${country.code}`}
           style={{ textDecoration: "none" }}
         >
           <Card>
