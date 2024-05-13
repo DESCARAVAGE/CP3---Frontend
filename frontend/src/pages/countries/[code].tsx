@@ -39,7 +39,7 @@ const CountryDetailComponent = () => {
 
   return (
     <>
-      <Box display={"flex"} flexDirection={"column"} alignContent={"center"} >
+      <Box flexDirection={"column"} alignContent={"center"} >
         <Box>{country.emoji}</Box>
         <Box>{country.name}</Box>
       </Box>
