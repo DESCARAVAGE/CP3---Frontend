@@ -1,3 +1,17 @@
+:root {
+  --primary-color: #e81c52;
+  --primary-color-medium: #e8416e;
+  --primary-color-light: #e887a1;
+
+  --secondary-color: ;
+  --secondary-color-medium: ;
+  --secondary-color-light: ;
+
+  --thirdly-color: ;
+  --thirdly-color-medium: ;
+  --thirdly-color-light: ;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,3 +27,5 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #f5f5f5;
 }
+
+

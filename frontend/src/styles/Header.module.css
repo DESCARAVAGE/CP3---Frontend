@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
